@@ -1,10 +1,12 @@
 """Largest palindrome product"""
 def is_palindrome(number):
     l = str(number)
-    for i in range(len(l)//2):
-        # string is also iterable
-        if l[i] != l[-1-i]: return False
-    return True
+    if l == l[::-1]:
+        return True
+#   for i in range(len(l)//2):
+#       # string is also iterable
+#       if l[i] != l[-1-i]: return False
+#   return True
 
 #for i in range(999, 100, -1):
 #    for j in range(i, 99, -1):
