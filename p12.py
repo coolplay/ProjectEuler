@@ -19,11 +19,9 @@ for n in triangle_number():
                 count = 2 * count - 1
                 break
     if count > 500:
-        print 'Done'
+        print """The first triangle number to have over five hundred divisors ({}) is: {}""".format(count, n)
         break
 
 
-print """The first triangle number to have over five hundred divisors ({}) is:
-    {}""".format(count, n)
 
 

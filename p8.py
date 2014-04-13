@@ -27,6 +27,7 @@ s = """
 71636269561882670428252483600823257530420752963450
 """.strip().replace('\n', '')
 
+# 1.
 maximum = 0
 length = len(s)
 for i in range(length-4):
@@ -34,3 +35,7 @@ for i in range(length-4):
     if res > maximum:
         maximum = res
 print maximum
+
+# 2.
+print max(functools.reduce(operator.mul, map(int, s[i:i+5])) for i in
+        range(len(s)-4))

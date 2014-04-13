@@ -1,5 +1,5 @@
 """Smallest multiple"""
-from p3 import prime
+from euler import prime
 
 N = 20
 primes = list(prime(N+1))

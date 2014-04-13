@@ -3,6 +3,17 @@ import math
 import operator
 import itertools
 
+def fibonacci(maximum):
+    """Generate sequece of Fibonacci numbers no larger than `maximum`"""
+    i, j = 1, 2
+    if maximum <= 1:
+        return
+    else:
+        yield i
+    while j < maximum:
+        yield j
+        i, j = j, i+j
+
 def prime(maximum):
     """Generate sequence of prime numbers up to `maximum`"""
     if maximum < 2: return

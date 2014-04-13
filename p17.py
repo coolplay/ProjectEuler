@@ -56,11 +56,12 @@ def number2letter(seq):
         if 0 < i < 100:
             yield _number2letter(i)
         elif i < 1000:
-            div, mod = divmod(i, 100)
+            m = 100
+            div, mod = divmod(i, m)
             if mod == 0:
-                yield '{} {}'.format(table[div], table[100])
+                yield '{} {}'.format(table[div], table[m])
             else:
-                yield '{} {} and {}'.format(table[div], table[100],
+                yield '{} {} and {}'.format(table[div], table[m],
                         _number2letter(mod))
         elif i == 1000:
             yield 'one thousand'

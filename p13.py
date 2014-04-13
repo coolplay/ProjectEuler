@@ -105,3 +105,6 @@ s = """
 
 l = s.split()
 print(str(sum(int(i) for i in l))[:10])
+
+# 2.
+print(str(sum(map(int, l)))[:10])
