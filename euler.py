@@ -47,10 +47,10 @@ def sumofdigits(integer):
     s = str(integer)
     return sum(int(i) for i in list(s))
 
-def divisor(integer):
+def divisor(integer, self=True):
     """Generate divisor sequence of positive int `integer` increasingly"""
     assert integer > 0
-    for i in range(1, integer+1):
+    for i in range(1, integer+self):
         if integer % i == 0:
             yield i
 
