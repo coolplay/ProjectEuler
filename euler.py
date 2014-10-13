@@ -14,6 +14,7 @@ def fibonacci(maximum):
         yield j
         i, j = j, i+j
 
+
 def prime(maximum):
     """Generate sequence of prime numbers up to `maximum`"""
     if maximum < 2: return
