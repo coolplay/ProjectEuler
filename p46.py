@@ -21,11 +21,11 @@ from euler import is_prime
 
 
 def odd_composite():
-    i = 5
+    i = 9
     while True:
-        if not is_prime(i) and i % 2 != 0:
+        if not is_prime(i):
             yield i
-        i += 1
+        i += 2
 
 
 def main():
@@ -39,6 +39,12 @@ def main():
                 break
             j += 1
 
+
+def main2():
+    for i in odd_composite():
+        if any(is_prime(i - 2*j**2) for j in xrange(i) if i - 2*j**2 > 1):
+            continue
+        return i
 
 if __name__ == '__main__':
     print main()

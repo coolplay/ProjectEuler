@@ -19,11 +19,11 @@ def prime(maximum):
     """Generate sequence of prime numbers up to `maximum`"""
     if maximum < 2: return
     for i in xrange(2, maximum):
-#       if i <= 3:
-#           yield i
-#           continue
-#       elif i == 4:
-#           continue
+        # if i <= 3:
+            # yield i
+            # continue
+        # elif i == 4:
+            # continue
         for j in xrange(2, int(i**0.5)+1):
             if i % j == 0: break
         else:
@@ -45,12 +45,12 @@ def nchoosek(n, k):
     fact = math.factorial
     return fact(n)//fact(k)//fact(n-k)
 
-#   if n < 0 or k < 0:
-#       raise Exception('Non negative number required!')
-#   if n < k:
-#       return 0
-#   return (reduce(operator.mul, (i for i in xrange(n, n-k, -1))) /
-#       reduce(operator.mul, (i for i in xrange(1, k+1))))
+    # if n < 0 or k < 0:
+        # raise Exception('Non negative number required!')
+    # if n < k:
+        # return 0
+    # return (reduce(operator.mul, (i for i in xrange(n, n-k, -1))) /
+        # reduce(operator.mul, (i for i in xrange(1, k+1))))
 
 def sumofdigits(integer):
     """Return sum of digits in integer"""
@@ -78,11 +78,12 @@ def get_digits(i):
     digits.append(i)
     return reversed(digits)
 
+
 def str_digits(i):
     """Return str type of integer `i`"""
     return str(i)
     # Same as get_digits
-#   return map(int, list(str(i)))
+    # return map(int, list(str(i)))
 
 
 
