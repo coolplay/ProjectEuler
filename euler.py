@@ -86,4 +86,14 @@ def str_digits(i):
     # return map(int, list(str(i)))
 
 
+def is_palindromic(s):
+    """Return True if str `s` is palindromic."""
+    i, j = 0, len(s) - 1
+    while i < j:
+        if s[i] != s[j]:
+            return False
+        i, j = i+1, j-1
+    return True
+
+
 

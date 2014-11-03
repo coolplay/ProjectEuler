@@ -11,16 +11,7 @@ in base 10 and base 2.
 (Please note that the palindromic number, in either base, may not include
 leading zeros.)
 """
-
-
-def is_palindromic(s):
-    """Return True if str `s` is palindromic."""
-    i, j = 0, len(s) - 1
-    while i < j:
-        if s[i] != s[j]:
-            return False
-        i, j = i+1, j-1
-    return True
+from euler import is_palindromic
 
 
 def main():
