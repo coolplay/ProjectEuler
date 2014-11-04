@@ -41,7 +41,10 @@ class memoize:
 
 @memoize
 def f(n):
-    "Return nth expansion of sqrt(2)"
+    """Return nth expansion of sqrt(2)
+
+    f(n+1) = f(n)+2 / f(n)+1
+    """
     if n == 1:
         return Fraction(3, 2)
     return (f(n-1)+2) / (f(n-1)+1)
@@ -50,6 +53,17 @@ def f(n):
 def main():
     return sum(len(str(f(n).numerator)) > len(str(f(n).denominator))
                for n in xrange(1, 1000))
+
+
+def main2():
+    sum = 0
+    expansion = 1
+    for n in xrange(1, 1000):
+        expansion = 1 + Fraction(1, 1+expansion)
+        if len(str(expansion.numerator)) > len(str(expansion.denominator)):
+            sum += 1
+    return sum
+
 
 if __name__ == '__main__':
     print main()
