@@ -48,6 +48,7 @@ def f(n):
     if n == 1:
         return Fraction(3, 2)
     return (f(n-1)+2) / (f(n-1)+1)
+    return 1 + 1/(1+f(n-1))
 
 
 def main():
@@ -66,4 +67,4 @@ def main2():
 
 
 if __name__ == '__main__':
-    print main()
+    print main2()
