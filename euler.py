@@ -2,6 +2,7 @@
 import math
 import operator
 import itertools
+import bisect
 
 def fibonacci(maximum):
     """Generate sequece of Fibonacci numbers no larger than `maximum`"""
@@ -96,4 +97,11 @@ def is_palindromic(s):
     return True
 
 
+# Modified from Python docs for bisect
+def binsearch(a, x):
+    'Locate the leftmost value exactly equal to x in sorted sequence `a`'
+    i = bisect.bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    return -1
 
